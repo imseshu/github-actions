@@ -1,0 +1,20 @@
+name: Node Test
+
+on: push
+
+jobs:
+  Node-testing:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v6.0.2 # uses - this block is used for using actions
+        with: # with - used as an argument for uses that which version/repo/any other args to pass
+          repository: ... # repository - one of the args the checkout actions needed (Optional)
+      - name: Install NodeJS
+        uses: actions/setup-node@v6.2.0
+        with:
+          node-version: 24
+      - name: Install dependencies
+        run: npm ci
+      - name: Testing
+        run: npm test
