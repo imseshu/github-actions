@@ -1,0 +1,12 @@
+name: My First Workflow # name - Name for the Workflow
+
+on: workflow_dispatch # on - Event on which workflow needs to get triggered
+
+jobs: # jobs - list of steps runs on a machine
+  first-job: # name of the job
+    runs-on: ubuntu-latest # runs-on - Machine that job to runs on
+    steps: # steps - list of steps that runs inside the job (shell/action)
+      - name: Print greeting # name - Name of the step
+        run: echo "Hello World!" # run - Runs shell script
+      - name: Print goodbye
+        run: echo "Done - Bye!"
