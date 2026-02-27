@@ -1,6 +1,6 @@
 name: Node Test
 
-on: push
+on: push # push - a type of event which triggers workflow when a push event happens on the repository
 
 jobs:
   Node-testing:
