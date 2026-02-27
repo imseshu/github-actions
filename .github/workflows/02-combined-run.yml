@@ -1,0 +1,14 @@
+name: Second Hello World
+
+on: workflow_dispatch
+
+jobs:
+  combined_run:
+    runs-on: ubuntu-slim
+    steps:
+      - name: Combined shell
+        run: |
+          echo "Hello World"
+          echo date > date.txt
+          cat date.txt
+          echo "Completed! Bye-bye..."
