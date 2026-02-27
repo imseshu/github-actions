@@ -9,6 +9,6 @@ jobs:
       - name: Combined shell
         run: |
           echo "Hello World"
-          echo date > date.txt
+          date > date.txt
           cat date.txt
           echo "Completed! Bye-bye..."
